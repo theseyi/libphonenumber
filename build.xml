@@ -159,7 +159,7 @@
   </target>
 
   <target name="compile" depends="clean,prepare-country-metadata,compile-libphonenumber">
-    <foreach parallel="true" target="compile-country-libphonenumber" param="regioncode" list="${regioncodes}"/>
+    <foreach target="compile-country-libphonenumber" param="regioncode" list="${regioncodes}"/>
   </target>
 
   <target name="lint" description="lints all javascript files">
